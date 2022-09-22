@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+
+  backend:
+    image: jenkins_sky
+    build: 
+      context: ./Hello.py
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+      
+  
