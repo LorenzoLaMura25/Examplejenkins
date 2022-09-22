@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from Esercizio.Hello import Hello
+from Hello import Hello
 
 app = FastAPI()
 
