@@ -5,7 +5,7 @@ services:
   backend:
     image: jenkins_sky
     build: 
-      context: ./Hello.py
+      context: Hello
       dockerfile: ./Dockerfile
     ports:
       - "8000:8000"
