@@ -1,24 +1,30 @@
 pipeline {
-    agent any
-
-    stages{
-        stage("build"){
-            steps{
-                echo "Building Application"
+    agent none
+    stages {
+        stage('Build') {
+            agent {
+                docker { image 'jenkins_sky' }
+            }
+            steps {
+                sh 'pip --version'
             }
         }
-
-        stage("test"){
-            steps{
-                echo "Testing Application"
+        stage('Test') {
+            agent {
+                docker { image 'jenkins_sky' }
+            }
+            steps {
+                sh 'pip --version'
+            }
+        }
+       stage('Deploy') {
+            agent {
+                docker { image 'jenkins_sky' }
+            }
+            steps {
+                sh 'pip --version'
             }
         }
         
-        stage("deploy"){
-            steps{
-                echo "Deploying Application"
-                }
-        }
     }
-  
 }
