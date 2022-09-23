@@ -17,7 +17,7 @@ pipeline {
                 sh 'pip --version'
             }
         }
-       stage('Deploy') {
+        stage('Deploy') {
             agent {
                 docker { image 'jenkins_sky' }
             }
